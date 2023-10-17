@@ -11,7 +11,7 @@ jobs:
         command: pip install -r requirements.txt
       -run:
         name: Run tests
-        command: python test.py
+        command: python TestFolder/test.py
       
 
 workflows:
