@@ -10,8 +10,8 @@ jobs:
           name: Install dependencies
           command: pip install -r requirements.txt
       -run:
-        name: Run tests
-        command: python TestFolder/test.py
+          name: Run tests
+          command: python TestFolder/test.py
 
 workflows:
   version: 2
