@@ -1,7 +1,7 @@
 import unittest
 import sys
 
-sys.path.insert(0, "../ProjectFolder")
+sys.path.insert(0, "ProjectFolder")
 from code import foo
 
 class TestFoo(unittest.TestCase):
