@@ -5,7 +5,7 @@ jobs:
     docker:
       - image: python 3.10
     steps:
-      - checkout
+      - checkout: main
       - run:
         name: Install dependencies
         command: pip install -r requirements.txt
