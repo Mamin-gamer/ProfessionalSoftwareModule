@@ -11,7 +11,7 @@ jobs:
           command: pip install -r requirements.txt
       - run:
           name: Run tests in CircleCi test folder
-          command: python CircleCI_test/TestFolder/test
+          command: python CircleCI_test/TestFolder/test.py
       # - run:
       #     name: Run tests in Coursework
       #     command: python Coursework/
