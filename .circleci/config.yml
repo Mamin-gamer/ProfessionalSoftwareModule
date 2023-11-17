@@ -10,11 +10,13 @@ jobs:
           name: Install dependencies
           command: pip install -r requirements.txt
       - run:
-          name: Run tests
-          command: python TestFolder/test.py
+          name: Run tests in CircleCi test folder
+          command: python CircleCi test/TestFolder/test
+      - run:
+          name: Run tests in Coursework
+          command: python Coursework/
 
 workflows:
-  version: 2
   build: 
     jobs:
       - build
