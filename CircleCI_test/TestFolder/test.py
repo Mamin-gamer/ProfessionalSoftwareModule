@@ -1,7 +1,7 @@
 import unittest
 import sys
 
-sys.path.insert(0, "ProjectFolder")
+sys.path.insert(0, "CircleCI_test/ProjectFolder")
 from code import foo
 
 class TestFoo(unittest.TestCase):
