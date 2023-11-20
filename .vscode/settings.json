@@ -1,0 +1,14 @@
+{
+    "python.analysis.extraPaths": [
+        "./Coursework/Notebooks/Functions"
+    ],
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./Coursework",
+        "-p",
+        "test*.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": true
+}
