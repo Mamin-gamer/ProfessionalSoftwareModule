@@ -1,7 +1,3 @@
-import numpy as np
-from scipy import stats as st
-
-
 class MyFunctions:
     def pmcc(x: list, y: list):
         if len(x) != len(y):
@@ -24,11 +20,24 @@ class MyFunctions:
         return correlation_coefficient
 
     def linear_regression(x, y):
-        meanx = np.mean(x)
-        meany = np.mean(y)
-        sigmax = np.std(x)
-        sigmay = np.std(y)
-        sigmaxy = np.sum(np.multiply(x - meanx, y - meany)) / (len(x))
-        m = sigmaxy / (sigmax * sigmax)
-        q = meany - m * meanx
-        return m, q
+        if len(x) != len(y):
+            raise ValueError("Input arrays must have the same length")
+
+        # Calculate the means of x and y
+        mean_x = sum(x) / len(x)
+        mean_y = sum(y) / len(y)
+
+        # Calculate the slope (m) and intercept (b) using least squares method
+        numerator = sum((x[i] - mean_x) * (y[i] - mean_y) for i in range(len(x)))
+        denominator = sum((x[i] - mean_x) ** 2 for i in range(len(x)))
+
+        # Avoid division by zero
+        if denominator == 0:
+            raise ValueError(
+                "The denominator in the slope calculation is zero. Cannot perform linear regression."
+            )
+
+        slope = numerator / denominator
+        intercept = mean_y - slope * mean_x
+
+        return slope, intercept
