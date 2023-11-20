@@ -1,4 +1,5 @@
 import numpy as np
+from scipy import stats as st
 
 
 class MyFunctions:
@@ -22,8 +23,12 @@ class MyFunctions:
         correlation_coefficient = numerator / (denominator_x * denominator_y)
         return correlation_coefficient
 
-
-x = [15, 12, 8, 8, 7, 7, 7, 6, 5, 3]
-y = [10, 25, 17, 11, 13, 17, 20, 13, 9, 15]
-print(MyFunctions.pmcc(x, y))
-print(np.corrcoef(x, y))
+    def linear_regression(x, y):
+        meanx = np.mean(x)
+        meany = np.mean(y)
+        sigmax = np.std(x)
+        sigmay = np.std(y)
+        sigmaxy = np.sum(np.multiply(x - meanx, y - meany)) / (len(x))
+        m = sigmaxy / (sigmax * sigmax)
+        q = meany - m * meanx
+        return m, q
