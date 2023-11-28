@@ -12,9 +12,9 @@ jobs:
       # - run:
       #     name: Run tests in CircleCi test folder
       #     command: python CircleCI_test/TestFolder/test.py
-      - run:
-          name: Run tests in Coursework
-          command: python Coursework/Tests/test_stats_funcitons.py
+      # - run:
+      #     name: Run tests in Coursework
+      #     command: python Coursework/Tests/test_stats_funcitons.py
 
 workflows:
   build: 

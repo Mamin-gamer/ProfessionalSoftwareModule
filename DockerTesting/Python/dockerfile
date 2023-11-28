@@ -1,0 +1,7 @@
+FROM python:3.9.2
+
+WORKDIR C:\Users\dima1\OneDrive - Queen Mary, University of London\Documents\Year 2\Software Practices\ProfessionalSoftwareModule\DockerTesting\Build
+
+COPY . .
+
+CMD ["python", "hello_world.py"]
