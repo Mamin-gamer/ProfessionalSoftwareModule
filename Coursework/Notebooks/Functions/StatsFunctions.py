@@ -41,3 +41,6 @@ class MyFunctions:
         intercept = mean_y - slope * mean_x
 
         return slope, intercept
+
+    def mean(x: list):
+        return round(sum(x) / len(x), 4)
