@@ -27,3 +27,18 @@ class TestMain(unittest.TestCase):
         self.assertAlmostEqual(
             MF.linear_regression(x, y), (0.030471388740135587, 6.412805314490438), 5
         )
+
+    def test_linear_regression_2(self):
+        ...
+
+    def test_linear_regression_3(self):
+        ...
+
+    def test_mean_1(self):
+        ...
+
+    def test_mean_2(self):
+        ...
+
+    def test_mean_3(self):
+        ...

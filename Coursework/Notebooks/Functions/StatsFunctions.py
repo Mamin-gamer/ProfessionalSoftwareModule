@@ -44,3 +44,6 @@ class MyFunctions:
 
     def mean(x: list):
         return round(sum(x) / len(x), 4)
+
+    def SD(x: list):
+        ...
