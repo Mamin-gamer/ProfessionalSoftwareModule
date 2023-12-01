@@ -19,7 +19,7 @@ class MyFunctions:
         correlation_coefficient = numerator / (denominator_x * denominator_y)
         return correlation_coefficient
 
-    def linear_regression(x, y):
+    def linear_regression(x: list, y: list):
         if len(x) != len(y):
             raise ValueError("Input arrays must have the same length")
 
