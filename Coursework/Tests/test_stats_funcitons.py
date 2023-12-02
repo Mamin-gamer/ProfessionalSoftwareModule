@@ -91,6 +91,3 @@ class TestMain(unittest.TestCase):
             0.358296576788254,
         ]
         self.assertAlmostEqual(MF.mean(x), (0.47955620242178154), 5)
-
-    def test_mean_3(self):
-        ...
