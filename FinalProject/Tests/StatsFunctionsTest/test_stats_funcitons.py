@@ -24,14 +24,18 @@ class TestMain(unittest.TestCase):
     def test_linear_regression_1(self):
         x = [215, 325, 185, 332, 406, 522, 412, 614, 544, 421, 445, 408]
         y = [14.2, 16.4, 11.9, 15.2, 18.5, 22.1, 19.4, 25.1, 23.4, 18.1, 22.6, 17.2]
-        self.assertAlmostEqual(
-            MF.linear_regression(x, y), (0.030471388740135587, 6.412805314490438), 5
-        )
+        slope, intercept, pmcc = MF.linear_regression(x, y)
+        self.assertAlmostEqual(slope, 0.03047138874013559, 5)
+        self.assertAlmostEqual(intercept, 6.412805314490436, 5)
+        self.assertAlmostEqual(pmcc, 0.9575066230015953, 5)
 
     def test_linear_regression_2(self):
         x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
         y = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-        self.assertAlmostEqual(MF.linear_regression(x, y), (1.0, 0.0), 5)
+        slope, intercept, pmcc = MF.linear_regression(x, y)
+        self.assertAlmostEqual(slope, 1.0, 5)
+        self.assertAlmostEqual(intercept, 0.0, 5)
+        self.assertAlmostEqual(pmcc, 1.0, 5)
 
     def test_linear_regression_3(self):
         x = [
@@ -58,9 +62,11 @@ class TestMain(unittest.TestCase):
             0.6592129905082018,
             0.41854571966835763,
         ]
-        self.assertAlmostEqual(
-            MF.linear_regression(x, y), (0.004009513814945522, 0.4928029792242724), 5
-        )
+
+        slope, intercept, pmcc = MF.linear_regression(x, y)
+        self.assertAlmostEqual(slope, 0.004009513814945507, 5)
+        self.assertAlmostEqual(intercept, 0.4928029792242723, 5)
+        self.assertAlmostEqual(pmcc, 0.004244714724793445, 5)
 
     def test_mean_1(self):
         x = [

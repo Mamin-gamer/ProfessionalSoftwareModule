@@ -16,8 +16,9 @@ This project explores the relationships between average IQ scores, socio-economi
 ### 2. Analysis
 
 - `Main.ipynb`: Jupyter Notebook containing the data analysis process.
-- `FIgrues` folder: Contains all visualisation produced during analysis 
-
+- `Figrues folder`: Contains all visualisation produced during analysis 
+- `Functions folder`: Contains all self-made functions to be tested
+- `Tests folder`: Contains all unit testing 
 
 ## Usage
 

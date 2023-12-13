@@ -1,6 +1,7 @@
 {
+    // To make VScode display helper functions
     "python.analysis.extraPaths": [
-        "./Coursework/Notebooks/Functions"
+        "./FinalProject/Notebooks/Functions"
     ],
     "python.testing.unittestArgs": [
         "-v",

@@ -1,4 +1,4 @@
-def pmcc(x: list, y: list):
+def pmcc(x: list, y: list) -> float:
     if len(x) != len(y):
         raise ValueError("Input arrays must have the same length")
 
@@ -43,5 +43,5 @@ def linear_regression(x: list, y: list):
     return slope, intercept, pmcc(x, y)
 
 
-def mean(x: list):
+def mean(x: list) -> float:
     return round(sum(x) / len(x), 5)

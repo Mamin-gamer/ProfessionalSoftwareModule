@@ -11,7 +11,7 @@ jobs:
           command: pip install -r requirements.txt
       - run:
           name: Run tests in Coursework
-          command: python FinalProject/Tests/test_stats_funcitons.py
+          command: python FinalProject/Tests/StatsFunctionTest/test_stats_funcitons.py
 
 workflows:
   build:
