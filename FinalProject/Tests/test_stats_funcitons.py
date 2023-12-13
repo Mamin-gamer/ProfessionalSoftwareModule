@@ -1,7 +1,7 @@
 import unittest
 import sys
 
-sys.path.insert(0, "Coursework/Notebooks/Functions")
+sys.path.insert(0, "FinalProject/Notebooks/Functions")
 import StatsFunctions as MF
 
 
@@ -91,3 +91,7 @@ class TestMain(unittest.TestCase):
             0.358296576788254,
         ]
         self.assertAlmostEqual(MF.mean(x), (0.47955620242178154), 5)
+
+
+if __name__ == "__main__":
+    unittest.main()
