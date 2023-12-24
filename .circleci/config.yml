@@ -16,7 +16,7 @@ jobs:
           name: Run tests for Linear Regression
           command: python FinalProject/Tests/StatsFunctionsTest/test_linear_regression.py
       - run:
-          name: Run tests for Diction Filtering
+          name: Run tests for Dictionary Filtering
           command: python FinalProject/Tests/StatsFunctionsTest/test_filter_dict.py
       - run:
           name: Run tests for Mean

@@ -25,10 +25,10 @@ def linear_regression(x: list, y: list):
     if len(x) != len(y):
         raise ValueError("Input arrays must have the same length")
 
-    if len(x) <= 0:
-        raise ValueError("Input array x must have at least 1 element")
-    if len(y) <= 0:
-        raise ValueError("Input array y must have at least 1 element")
+    if len(x) <= 1:
+        raise ValueError("Input array x must have at least 2 elements")
+    if len(y) <= 1:
+        raise ValueError("Input array y must have at least 2 elements")
 
     # Calculate the means of x and y
     mean_x = sum(x) / len(x)
@@ -40,7 +40,7 @@ def linear_regression(x: list, y: list):
 
     # Avoid division by zero
     if denominator == 0:
-        raise ValueError(
+        raise ZeroDivisionError(
             "The denominator in the slope calculation is zero. Cannot perform linear regression."
         )
 
