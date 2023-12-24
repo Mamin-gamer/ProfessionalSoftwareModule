@@ -1,15 +1,13 @@
 {
-    // To make VScode display helper functions
-    "python.analysis.extraPaths": [
-        "./FinalProject/Notebooks/Functions"
-    ],
-    "python.testing.unittestArgs": [
-        "-v",
-        "-s",
-        "./Coursework",
-        "-p",
-        "test_*.py"
-    ],
-    "python.testing.pytestEnabled": false,
-    "python.testing.unittestEnabled": true
+	// To make VScode display helper functions
+	"python.analysis.extraPaths": ["./FinalProject/Notebooks/Functions"],
+	"python.testing.unittestArgs": [
+		"-v",
+		"-s",
+		"./FinalProject",
+		"-p",
+		"test_*.py"
+	],
+	"python.testing.pytestEnabled": false,
+	"python.testing.unittestEnabled": true
 }
