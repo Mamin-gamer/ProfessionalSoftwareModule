@@ -2,7 +2,7 @@ import unittest
 import sys
 
 sys.path.insert(0, "FinalProject/Notebooks/Functions")
-import StatsFunctions as MF
+import BasicFunctions as MF
 
 
 class TestMain(unittest.TestCase):

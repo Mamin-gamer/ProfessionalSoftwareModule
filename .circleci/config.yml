@@ -10,8 +10,11 @@ jobs:
           name: Install dependencies
           command: pip install -r requirements.txt
       - run:
-          name: Run tests in Coursework
-          command: python FinalProject/Tests/StatsFunctionsTest/test_StatsFunctions.py
+          name: Run tests for basic functions
+          command: python FinalProject/Tests/StatsFunctionsTest/test_BasicFunctions.py
+      - run:
+          name: Run tests for complex functions
+          command: python FinalProject/Tests/StatsFunctionsTest/test_ComplexFunctions.py
 
 workflows:
   build:
