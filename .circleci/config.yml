@@ -1,7 +1,7 @@
 version: 2.1
 
 jobs:
-  build:
+  BuildTestCases:
     docker:
       - image: python:3.10
     steps:
@@ -28,4 +28,4 @@ jobs:
 workflows:
   build:
     jobs:
-      - build
+      - BuildTestCases
