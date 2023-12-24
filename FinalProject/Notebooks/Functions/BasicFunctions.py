@@ -54,3 +54,7 @@ def mean(x: list) -> float:
     if len(x) <= 0:
         raise ValueError("Input array must have at least 1 element")
     return round(sum(x) / len(x), 5)
+
+
+def filter_dict(dictionary: dict, keys: list[str] or tuple[str] or str) -> dict:
+    return {key: value for key, value in dictionary.items() if key not in keys}

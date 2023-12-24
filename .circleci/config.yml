@@ -10,10 +10,19 @@ jobs:
           name: Install dependencies
           command: pip install -r requirements.txt
       - run:
-          name: Run tests for basic functions
-          command: python FinalProject/Tests/StatsFunctionsTest/test_BasicFunctions.py
+          name: Run tests for PMCC
+          command: python FinalProject/Tests/StatsFunctionsTest/test_pmcc.py
       - run:
-          name: Run tests for complex functions
+          name: Run tests for Linear Regression
+          command: python FinalProject/Tests/StatsFunctionsTest/test_linear_regression.py
+      - run:
+          name: Run tests for Diction Filtering
+          command: python FinalProject/Tests/StatsFunctionsTest/test_filter_dict.py
+      - run:
+          name: Run tests for Mean
+          command: python FinalProject/Tests/StatsFunctionsTest/test_mean.py
+      - run:
+          name: Run tests for Complex Functions
           command: python FinalProject/Tests/StatsFunctionsTest/test_ComplexFunctions.py
 
 workflows:

@@ -1,5 +1,7 @@
 # Test Cases Description
 
+This file contains descripton for test cases in `StatsFunctionTest` folder
+
 ## PMCC Testing
 ### test_pmcc_1
 
