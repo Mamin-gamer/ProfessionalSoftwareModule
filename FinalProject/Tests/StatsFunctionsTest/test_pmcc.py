@@ -23,6 +23,24 @@ class TestPmcc(unittest.TestCase):
         with self.assertRaises(ValueError):
             pmcc(x, y)
 
+    def test_zero_denominator(self):
+        x = [1, 2, 3]
+        y = [2, 2, 2]
+        with self.assertRaises(ZeroDivisionError):
+            pmcc(x, y)
+
+    def test_empty_input_x(self):
+        x = []
+        y = [2, 4, 5, 4, 5]
+        with self.assertRaises(ValueError):
+            pmcc(x, y)
+
+    def test_single_element(self):
+        x = [1]
+        y = [2]
+        with self.assertRaises(ValueError):
+            pmcc(x, y)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -4,8 +4,8 @@ def pmcc(x: list, y: list) -> float:
 
     # Calculate the correlation coefficient
     num_points = len(x)
-    if num_points <= 0:
-        raise ValueError("Input arrays must have at least 1 element")
+    if num_points <= 1:
+        raise ValueError("Input arrays must have at least 2 element")
 
     # Calculate means
     mean_x = sum(x) / num_points
@@ -16,12 +16,17 @@ def pmcc(x: list, y: list) -> float:
     denominator_x = sum((x[i] - mean_x) ** 2 for i in range(num_points)) ** 0.5
     denominator_y = sum((y[i] - mean_y) ** 2 for i in range(num_points)) ** 0.5
 
+    denominator = denominator_x * denominator_y
+    if denominator == 0:
+        raise ZeroDivisionError(
+            "The denominator in the slope calculation is zero. Cannot perform linear regression."
+        )
     # Calculate correlation coefficient
-    correlation_coefficient = numerator / (denominator_x * denominator_y)
+    correlation_coefficient = numerator / denominator
     return correlation_coefficient
 
 
-def linear_regression(x: list, y: list):
+def linear_regression(x: list, y: list) -> tuple[float, float, float]:
     if len(x) != len(y):
         raise ValueError("Input arrays must have the same length")
 
@@ -57,4 +62,12 @@ def mean(x: list) -> float:
 
 
 def filter_dict(dictionary: dict, keys: list[str] or tuple[str] or str) -> dict:
+    if type(keys) not in [list, str, tuple]:
+        raise ValueError("Keys must be a list, a tupe or a string")
+
+    if type(keys) in [list, tuple]:
+        for key in keys:
+            if type(key) != str:
+                raise ValueError("One of the elements of iterable is integer")
+
     return {key: value for key, value in dictionary.items() if key not in keys}
