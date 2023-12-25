@@ -26,6 +26,7 @@ def pmcc(x: list, y: list) -> float:
     return correlation_coefficient
 
 
+# calculates slope, intercept and correlation coefficient of 2 arrays
 def linear_regression(x: list, y: list) -> tuple[float, float, float]:
     if len(x) != len(y):
         raise ValueError("Input arrays must have the same length")
@@ -39,7 +40,7 @@ def linear_regression(x: list, y: list) -> tuple[float, float, float]:
     mean_x = sum(x) / len(x)
     mean_y = sum(y) / len(y)
 
-    # Calculate the slope (m) and intercept (b) using least squares method
+    # Calculate the slope and intercept using least squares method
     numerator = sum((x[i] - mean_x) * (y[i] - mean_y) for i in range(len(x)))
     denominator = sum((x[i] - mean_x) ** 2 for i in range(len(x)))
 
@@ -55,12 +56,14 @@ def linear_regression(x: list, y: list) -> tuple[float, float, float]:
     return slope, intercept, pmcc(x, y)
 
 
+# calculates the mean of an array
 def mean(x: list) -> float:
     if len(x) <= 0:
         raise ValueError("Input array must have at least 1 element")
     return round(sum(x) / len(x), 5)
 
 
+# filters values from dictionary besed on keys specified
 def filter_dict(dictionary: dict, keys: list[str] or tuple[str] or str) -> dict:
     if type(keys) not in [list, str, tuple]:
         raise ValueError("Keys must be a list, a tupe or a string")

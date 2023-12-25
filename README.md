@@ -5,23 +5,27 @@
 Welcome to Dmitrii Ponomarev's DAT5902 - Professional Software and Career Practices 
 module repo. 
 
-This project explores the relationships between average IQ scores, socio-economic factors, and educational indicators across continents. The dataset includes variables such as IQ, Continent, Literacy, HDI, School Years, GNI, and Population. The goal is to derive meaningful insights into the global distribution of intelligence and its correlation with various socio-economic parameters.
+This project explores the relationships between average IQ scores, socio-economic factors, and educational indicators across continents. The dataset includes variables such as IQ, Continent, HDI, School Years, GNI, and Population. The goal is to derive meaningful insights into the global distribution of intelligence and its correlation with various socio-economic parameters.
 
 ## Files and Structure
 
 ### 1. Dataset
 
 - `UNDP Data`: The main dataset containing information on IQ, Continent, literacy, HDI, mean and expected number of school years, GNI, and life expectancy. The dataset from taken from [Human Development Reports website](https://hdr.undp.org/data-center/human-development-index#/indicies/HDI)
-- `HTML Data`: Contais 2 HTML files containing [Literacy Rate](https://www.datapandas.org/ranking/literacy-rate-by-country) and [Countris and their average IQ](https://www.datapandas.org/ranking/average-iq-by-country)
-  
+- `HTML Data`: Contais [Countris and their average IQ](https://www.datapandas.org/ranking/average-iq-by-country)
+
 
 ### 2. Analysis
 
 - `Main.ipynb`: Jupyter Notebook containing the data analysis process.
-- `Figrues folder`: Contains all visualisation produced during analysis 
-- `Functions folder`: Contains all self-made functions to be tested
-- `Tests folder`: Contains all unit testing for functions in `Functions folder`
 
+
+### 3. Functions
+- `Functions folder`: Contains all self-made functions to be tested
+
+### 4. Testing
+
+- `Tests folder`: Contains all unit testing for functions in `Functions folder`
 ## Usage
 
 To replicate the analysis and visualizations, follow these steps:
